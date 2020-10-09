@@ -5,7 +5,7 @@ import traceback
 
 app = Flask(__name__)
 
-@app.route("/")
+@app.route("/", methods=["GET"])
 def hello():
 	return json.dumps({"message":"Hello World", "statusCode":200})
 
